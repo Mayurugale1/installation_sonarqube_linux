@@ -1,0 +1,19 @@
+sudo -i 
+
+sudo apt install unzip wget -y
+
+cd /opt/
+
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.8.zip
+
+unzip sonarqube-7.8.zip 
+
+mv sonarqube-7.8 sonarqube
+#Add Sonar User & Change Ownership of sonarqube diretory
+sudo useradd sonar
+
+sudo chown -R sonar:sonar /opt/sonarqube
+##Add this line in sonar.sh file
+vim /opt/sonarqube/bin/linux-x86-64/sonar.sh 
+
+#RUN_AS_USER=sonar
