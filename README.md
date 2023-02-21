@@ -1,0 +1,1 @@
+# installation_sonarqube_linux
